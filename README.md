@@ -101,7 +101,7 @@ Response (201 Created):
 GET /strings
 Response (200 OK):
 
-json
+```json
 Copy code
 [
   {
@@ -115,14 +115,14 @@ Copy code
     "vowels": 1
   }
 ]
+```
 3️⃣ Get String by Value
 GET /strings/:string_value
 Example:
 /strings/hello
 Response (200 OK):
 
-json
-Copy code
+```json
 {
   "string_value": "hello",
   "length": 5,
@@ -130,29 +130,32 @@ Copy code
   "consonants": 3
 }
 Error (404 Not Found):
+```
+```json
 
-json
-Copy code
 { "error": "String not found" }
+```
 4️⃣ Filter by Natural Language
 GET /strings/filter-by-natural-language?query=hello
 Response (200 OK):
 
-json
-Copy code
+```json
+
 [
   {
     "string_value": "hello",
     "language": "English"
   }
 ]
+```
 Error (422 Unprocessable Entity):
 
-json
-Copy code
+```json
+
 {
   "error": "Query parsed but resulted in conflicting filters"
 }
+```
 5️⃣ Delete String
 DELETE /strings/:string_value
 Example:
@@ -160,21 +163,24 @@ Example:
 Success Response (204 No Content):
 
 css
-Copy code
+
 (empty body)
 Error (404 Not Found):
 
-json
+```json
 Copy code
 {
   "error": "String does not exist in the system"
 }
+```
 🌱 Example .env
-bash
+```bash
 Copy code
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/stringAnalyzer
+```
 🧪 Testing with Postman
+---
 Open Postman or Insomnia
 
 Set Base URL to: http://localhost:5000/strings
