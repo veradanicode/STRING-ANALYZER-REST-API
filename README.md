@@ -66,17 +66,22 @@ Server will run at:
 👉 http://localhost:5000
 ```
 🧩 Dependencies
+---
 Package	Description
+```bash
 express	For handling HTTP requests and responses
 mongoose	For MongoDB data modeling
 dotenv	For environment variable management
 nodemon (dev)	Auto-restarts the server during development
-
+```
 Install manually (if needed):
-
+```bash
 npm install express mongoose dotenv
 npm install --save-dev nodemon
+```
+
 🧠 API Endpoints
+---
 1️⃣ Create & Analyze String
 POST /strings
 Request Body:
@@ -105,7 +110,7 @@ GET /strings
 Response (200 OK):
 
 ```json
-Copy code
+
 [
   {
     "string_value": "hello",
@@ -132,8 +137,9 @@ Response (200 OK):
   "vowels": 2,
   "consonants": 3
 }
-Error (404 Not Found):
+
 ```
+Error (404 Not Found):
 ```json
 
 { "error": "String not found" }
@@ -160,10 +166,15 @@ Error (422 Unprocessable Entity):
 }
 ```
 5️⃣ Delete String
+```bash
 DELETE /strings/:string_value
+
 Example:
 /strings/hello
+
 Success Response (204 No Content):
+```
+
 
 (empty body)
 Error (404 Not Found):
@@ -224,9 +235,14 @@ DELETE /strings/me
 ```
 💻 GitHub Repository
 🔗https://github.com/veradanicode/STRING-ANALYZER-REST-API.git
-👨🏽‍💻 Author
-Vera Daniel
-💻 GitHub
-🐦 Twitter / X
-📧 veradanicode@gmail.com
+
+
+🧩 Author
+---
+👩🏽‍💻 Vera Daniel
+📧 Email: veradanicode@gmail.com
+
+💻 GitHub: [@veradanicode](https://github.com/veradanicode)
+
+💬 LinkedIn: [Vera Daniel](https://www.linkedin.com/in/vera-daniel-4a6942299/)
 
