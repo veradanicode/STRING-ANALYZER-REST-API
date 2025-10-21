@@ -25,7 +25,7 @@ It’s built with **Node.js**, **Express**, and **MongoDB** to demonstrate CRUD 
 ---
 
 ## 📁 Folder Structure
-
+```json
 project/
 ├── controllers/
 │ └── string-controller.js
@@ -36,7 +36,7 @@ project/
 ├── .env
 ├── package.json
 └── server.js
-
+```
 
 ---
 
@@ -77,7 +77,7 @@ npm install --save-dev nodemon
 1️⃣ Create & Analyze String
 POST /strings
 Request Body:
-
+```
 ```json
 {
   "string_value": "hello world"
