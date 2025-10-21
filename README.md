@@ -25,7 +25,7 @@ It’s built with **Node.js**, **Express**, and **MongoDB** to demonstrate CRUD 
 ---
 
 ## 📁 Folder Structure
-```json
+```bash
 project/
 ├── controllers/
 │ └── string-controller.js
@@ -46,22 +46,25 @@ project/
 ```bash
 git clone https://github.com/veradanicode/string-analyzer-api.git
 cd string-analyzer-api
+```
 2️⃣ Install dependencies
-bash
-Copy code
+```bash
+
 npm install
+```
 3️⃣ Create an .env file in the project root
-bash
-Copy code
+```bash
+
 PORT=5000
 MONGO_URI=your_mongodb_connection_string
+```
 4️⃣ Start the development server
-bash
-Copy code
+```bash
+
 npm start
 Server will run at:
 👉 http://localhost:5000
-
+```
 🧩 Dependencies
 Package	Description
 express	For handling HTTP requests and responses
@@ -162,20 +165,18 @@ Example:
 /strings/hello
 Success Response (204 No Content):
 
-css
-
 (empty body)
 Error (404 Not Found):
 
 ```json
-Copy code
+
 {
   "error": "String does not exist in the system"
 }
 ```
 🌱 Example .env
 ```bash
-Copy code
+
 PORT=5000
 MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/stringAnalyzer
 ```
@@ -197,31 +198,32 @@ DELETE /strings/:string_value
 
 Example test command (via curl):
 
-bash
-Copy code
+```bash
+
 curl -X POST http://localhost:5000/strings \
 -H "Content-Type: application/json" \
 -d '{"string_value": "hello world"}'
+```
 📘 Example Usage
 Here’s a quick example of how the API works together:
 
-bash
-Copy code
+```bash
+
 # Create a new string
 POST /strings
-{ "string_value": "chatgpt" }
+{ "string_value": "me" }
 
 # Get all stored strings
 GET /strings
 
 # Get a specific string
-GET /strings/chatgpt
+GET /strings/me
 
 # Delete a string
-DELETE /strings/chatgpt
+DELETE /strings/me
+```
 💻 GitHub Repository
-🔗 https://github.com/veradanicode/string-analyzer-api
-
+🔗https://github.com/veradanicode/STRING-ANALYZER-REST-API.git
 👨🏽‍💻 Author
 Vera Daniel
 💻 GitHub
