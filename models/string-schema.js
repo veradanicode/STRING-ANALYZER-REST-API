@@ -1,7 +1,11 @@
 const mongoose =require('mongoose');
 
 const StringSchema=new mongoose.Schema({
-   
+    id: {
+    type: String,
+    required: true,
+    unique: true
+  },
     value:{
         type:String,
         required:true

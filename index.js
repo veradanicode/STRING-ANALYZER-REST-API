@@ -9,10 +9,11 @@ const app=express();
 app.use(express.json())
 
 //routes
-app.use('/string',analyzeString)
+app.use('/strings',analyzeString)
 
 //connect to db
 connectToDb();
+
 const PORT=process.env.PORT;
 app.listen(PORT,()=>{
     console.log(`Server is running at port ${PORT}` );
